@@ -77,6 +77,10 @@ DATABASES = {
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),   # Or an IP Address that your DB is hosted on
         'PORT': config('DB_PORT'),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8nb4',
+        }
     }
 }
 
@@ -100,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # REST_FRAMEWORK = {
-#     # Use Django's standard `django.contrib.auth` permissions,
+#     # Use Django's standard django.contrib.auth permissions,
 #     # or allow read-only access for unauthenticated users.
 #     'DEFAULT_PERMISSION_CLASSES': [
 #         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
@@ -212,4 +216,4 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
-# end ckeditor config 
+# end ckeditor config
