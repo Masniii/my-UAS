@@ -14,7 +14,7 @@
                     <img src="{% static 'halaman/assets/img/image_placeholder.jpg' %}" alt="">
                     {% endif %}
                     <h3 class="title">{{ artikel.judul }}</h3>
-                    <p>{{ artikel.isi }}</p>
+                    <p>{{ artikel.isi |safe}}</p>
 
                     <blockquote>
                         <!-- <p>

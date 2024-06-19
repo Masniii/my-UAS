@@ -52,7 +52,7 @@
                             <h6 class="category text-info">{{ artikel.kategori }}</h6>
                             <h4 class="card-title">
                                 <a href="{% url 'detail_artikel' artikel.slug %}">{{ artikel.judul }}</a></h4>
-                            <p class="card-description">{{ artikel.isi |truncatechars:'200' }}<a href="{% url 'detail_artikel' artikel.slug %}"> Read More </a>
+                            <p class="card-description">{{ artikel.isi |truncatechars:'200'|safe }}<a href="{% url 'detail_artikel' artikel.slug %}"> Read More </a>
                             </p>
                             <span class="label label-info">{{ artikel.created_at }}</span>
                         </div>
