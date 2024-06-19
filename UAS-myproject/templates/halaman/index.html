@@ -23,11 +23,11 @@
                         <a href="/">All</a>
                       </li>
 
-                      {% for kategori in data_kategori %}
-                      <li {% if menu_aktif == kategori.judul %} class="active" {% endif %}>
-                        <a href="/?kategori={{ kategori.judul }}">{{ kategori }}</a>
-                      </li>
-                      {% endfor %}
+                    {% for kategori in data_kategori %}
+                        <li {% if menu_aktif == kategori.nama %} class="active" {% endif %}>
+                            <a href="/?kategori={{ kategori.nama }}">{{ kategori }}</a>
+                        </li>
+                    {% endfor %}
                     </ul>
 
                 </div>
